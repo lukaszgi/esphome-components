@@ -32,7 +32,7 @@ namespace
 
         di.setMeterType(MeterType::HeatMeter);
         di.addLinkMode(LinkMode::T1);
-        di.addDetection(MANUFACTURER_QDS, 0x07, 0x1a);
+        // di.addDetection(MANUFACTURER_QDS, 0x07, 0x1a);
         di.usesProcessContent();
         di.setConstructor([](MeterInfo& mi, DriverInfo& di){ return shared_ptr<Meter>(new Driver(mi, di)); });
     });
